@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Color</title>
+    <style>
+        body {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #colorDiv {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bulb is <i id="heading">Off</i></h1>
+    <div id="colorDiv">
+    </div><br>
+    <button onclick="toggleColor()">Click me</button>
+
+    <script>
+        function toggleColor() {
+            const divElement = document.getElementById('colorDiv');
+            const currentColor = divElement.style.backgroundColor;
+
+            if (currentColor === 'yellow') {
+                divElement.style.backgroundColor = 'grey';
+            } else {
+                divElement.style.backgroundColor = 'yellow';
+            }
+
+            const heading = document.getElementById('heading');
+            const currentText = heading.innerHTML;
+
+            if (currentText === 'Off') {
+                heading.innerHTML = 'ON';
+            } else {
+                heading.innerHTML = 'Off';
+            }
+        }
+    </script>
+
+</body>
+</html>

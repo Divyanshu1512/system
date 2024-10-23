@@ -1,0 +1,23 @@
+.lightbulb {
+  width: 100px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lightbulb.off {
+  background-color: grey;
+}
+
+.lightbulb.on {
+  background-color: yellow;
+  box-shadow: 0 0 20px yellow;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
